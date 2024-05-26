@@ -1,7 +1,10 @@
 
+import { useState } from "react";
+import UploadWidget from "../../components/uploadWidget/uploadWidget";
 import "./profileUpdatePage.scss";
 
 function ProfileUpdatePage() {
+  const [avatar, setAvatar] = useState(currentUser.avatar)
   return (
     <div className="profileUpdatePage">
       <div className="formContainer">
@@ -32,6 +35,13 @@ function ProfileUpdatePage() {
       </div>
       <div className="sideContainer">
         <img src="" alt="" className="avatar" />
+        <UploadWidget uwConfig={{
+          cloudName: "dc0poqt9l",
+          uploadPreset: "estate",
+          multiple: false,
+          maxImageFileSize:200000,
+          folder: "avatars",
+        }} />
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import express from "express";
-import { shouldBeAdmin, shouldBeLoggedIn } from "../controllers/text.controller";
-import { verifyToken } from "../middleware/verifyToken";
+import { shouldBeAdmin, shouldBeLoggedIn } from "../controllers/text.controller.js";
+import { verifyToken } from "../middleware/verifyToken.js";
 
 const testRoute = express.Router();
 
